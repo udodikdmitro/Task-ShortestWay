@@ -1,6 +1,8 @@
 package shortestway;
 
 import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Queue;
 
 class Node {
@@ -45,11 +47,11 @@ class Main {
 
         // создаем пустую queue
         Queue<Node> q = new ArrayDeque<>();
+        ArrayList<Node> list = new ArrayList<>();
 
         // помечаем исходную ячейку как посещенную и ставим исходный узел в queue
         visited[i][j] = true;
         q.add(new Node(i, j, 0));
-
         // сохраняет длину самого длинного пути от источника к месту назначения
         int min_dist = Integer.MAX_VALUE;
 
@@ -63,6 +65,9 @@ class Main {
             i = node.x;
             j = node.y;
             int dist = node.dist;
+
+            list.add(node);
+            System.out.println("Way: " + i + "," + j);
 
             // если пункт назначения найден, обновляем `min_dist` и останавливаемся
             if (i == x && j == y) {
@@ -81,6 +86,10 @@ class Main {
                     q.add(new Node(i + row[k], j + col[k], dist + 1));
                 }
             }
+        }
+
+        for (int f = 0; f < list.size(); f++) {
+            System.out.println(list.get(f));
         }
 
         if (min_dist != Integer.MAX_VALUE) {
