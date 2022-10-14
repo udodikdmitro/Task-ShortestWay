@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ceb06705-65dc-4e6d-a3ca-3b44cb5a6f1b" name="Changes" comment="Corrected push.">
+    <list default="true" id="ceb06705-65dc-4e6d-a3ca-3b44cb5a6f1b" name="Changes" comment="New approach.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/shortestway/ShortestWay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shortestway/ShortestWay.java" afterDir="false" />
     </list>
@@ -18,6 +18,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="fb1ad0b8e52dc5ad11a33dd58dd1130560615ee2" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -80,6 +85,8 @@
       <workItem from="1665122968748" duration="1721000" />
       <workItem from="1665198734188" duration="9765000" />
       <workItem from="1665249141418" duration="7357000" />
+      <workItem from="1665467699623" duration="5441000" />
+      <workItem from="1665753826220" duration="7207000" />
     </task>
     <task id="LOCAL-00001" summary="First push.">
       <created>1664784945743</created>
@@ -101,6 +108,17 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -116,5 +134,25 @@
     <MESSAGE value="First push." />
     <MESSAGE value="Corrected push." />
     <option name="LAST_COMMIT_MESSAGE" value="Corrected push." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/shortestway/ShortestWay.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/shortestway/ShortestWay.java</url>
+          <line>11</line>
+          <properties class="shortestway.Point" method="&lt;init&gt;">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

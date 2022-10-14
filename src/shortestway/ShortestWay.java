@@ -77,6 +77,12 @@ class Main {
             // удалить передний узел из очереди и обработать его
             Point currentPoint = q.poll();
 
+            // (i, j) представляет текущую ячейку, а `dist` хранит ее
+            // минимальное расстояние от источника
+            i = currentPoint.x;
+            j = currentPoint.y;
+            int dist = currentPoint.dist;
+
             // если пункт назначения найден, обновляем `min_dist` и останавливаемся
             if (currentPoint.x == x && currentPoint.y == y) {
                 min_dist = currentPoint.dist;
