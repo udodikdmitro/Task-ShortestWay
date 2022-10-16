@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ceb06705-65dc-4e6d-a3ca-3b44cb5a6f1b" name="Changes" comment="New approach.">
+    <list default="true" id="ceb06705-65dc-4e6d-a3ca-3b44cb5a6f1b" name="Changes" comment="Finish adjustment.">
+      <change afterPath="$PROJECT_DIR$/src/shortestway/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shortestway/Point2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shortestway/ShortestWay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shortestway/ShortestWay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shortestway/ShortestWay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shortestway/LabyrinthWay.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +49,7 @@
   }
 }</component>
   <component name="RunManager">
-    <configuration name="shortestway.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="shortestway.Main" />
       <module name="Junior learn" />
       <extension name="coverage">
@@ -60,11 +62,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.shortestway.Main" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -86,7 +83,8 @@
       <workItem from="1665198734188" duration="9765000" />
       <workItem from="1665249141418" duration="7357000" />
       <workItem from="1665467699623" duration="5441000" />
-      <workItem from="1665753826220" duration="7207000" />
+      <workItem from="1665753826220" duration="7555000" />
+      <workItem from="1665774577426" duration="6228000" />
     </task>
     <task id="LOCAL-00001" summary="First push.">
       <created>1664784945743</created>
@@ -102,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665208412033</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Finish adjustment.">
+      <created>1665767914710</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1665767914710</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,26 +138,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First push." />
     <MESSAGE value="Corrected push." />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrected push." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/shortestway/ShortestWay.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/shortestway/ShortestWay.java</url>
-          <line>11</line>
-          <properties class="shortestway.Point" method="&lt;init&gt;">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Finish adjustment." />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish adjustment." />
   </component>
 </project>
