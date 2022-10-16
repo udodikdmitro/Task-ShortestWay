@@ -5,33 +5,42 @@ import java.util.*;
 class Point {
     // (x, y) представляет собой координаты ячейки матрицы, а
     // `dist` представляет их минимальное расстояние от источника
-    int x, y, dist;
+    private final Pair coordinates;
+    private final List<Pair> path;
 
-    List<Pair> path;
+    public int getX() {
+        return coordinates.x;
+    }
+
+    public int getY() {
+        return coordinates.y;
+    }
+
+    public List<Pair> getPath() {
+        return path;
+    }
 
     Point(int newX, int newY, List<Pair> previousPath) {
-        this.x = newX;
-        this.y = newY;
+        this.coordinates = new Pair(newX, newY);
         List<Pair> newPath = new ArrayList<>(previousPath);
-        newPath.add(new Pair(newX, newY));
+        newPath.add(coordinates);
         this.path = newPath;
-        this.dist = this.path.size() - 1;
     }
 
-}
+    static class Pair {
 
-class Pair {
+        int x;
+        int y;
 
-    int x, y;
+        public Pair(int x, int y) {
+            this.x = x;
+            this.y = y;
+        }
 
-    public Pair(int x, int y) {
-        this.x = x;
-        this.y = y;
-    }
-
-    @Override
-    public String toString() {
-        return "[" + x +"," + y + ']';
+        @Override
+        public String toString() {
+            return "[" + x +"," + y + ']';
+        }
     }
 }
 
@@ -50,9 +59,9 @@ class LabyrinthWay {
 
     // Находим кратчайший маршрут в матрице `mat` из источника
     // ячейка (i, j) в ячейку назначения (x, y)
-    public static int findShortestPathLength(int[][] mat, int currentX, int currentY, int distanationX, int distanationY) {
+    public static int findShortestPathLength(int[][] mat, int startX, int startY, int destinationX, int destinationY) {
         // базовый случай: неверный ввод
-        if (mat == null || mat.length == 0 || mat[currentX][currentY] == 0 || mat[distanationX][distanationY] == 0) {
+        if (mat == null || mat.length == 0 || mat[startX][startY] == 0 || mat[destinationX][destinationY] == 0) {
             throw new IllegalArgumentException("Wrong coordinates");
         }
 
@@ -67,8 +76,9 @@ class LabyrinthWay {
         Queue<Point> q = new ArrayDeque<>();
 
         // помечаем исходную ячейку как посещенную и ставим исходный узел в queue
-        visited[currentX][currentY] = true;
-        q.add(new Point(currentX, currentY, new ArrayList<>()));
+        visited[startX][startY] = true;
+        Point startPoint = new Point(startX, startY, new ArrayList<>());
+        q.add(startPoint);
         // сохраняет длину самого длинного пути от источника к месту назначения
         Integer min_dist = null;
 
@@ -77,15 +87,13 @@ class LabyrinthWay {
             // удалить передний узел из очереди и обработать его
             Point currentPoint = q.poll();
 
-            // (i, j) представляет текущую ячейку, а `dist` хранит ее
-            // минимальное расстояние от источника
-            currentX = currentPoint.x;
-            currentY = currentPoint.y;
+            int currentX = currentPoint.getX();
+            int currentY = currentPoint.getY();
 
             // если пункт назначения найден, обновляем `min_dist` и останавливаемся
-            if (currentX == distanationX && currentY == distanationY) {
-                min_dist = currentPoint.dist;
-                System.out.println(currentPoint.path);
+            if (currentX == destinationX && currentY == destinationY) {
+                min_dist = currentPoint.getPath().size() - 1;
+                System.out.println(currentPoint.getPath());
                 break;
             }
 
@@ -93,11 +101,11 @@ class LabyrinthWay {
             // и ставим в queue каждое допустимое движение
             for (int k = 0; k < 4; k++) {
                 // проверяем, можно ли выйти на позицию
-                // (currentX + row[k], currentY + col[k]) от текущей позиции
+                // (startX + row[k], startY + col[k]) от текущей позиции
                 if (isValid(mat, visited, currentX + row[k], currentY + col[k])) {
                     // отметить следующую ячейку как посещенную и поставить ее в queue
                     visited[currentX + row[k]][currentY + col[k]] = true;
-                    q.add(new Point(currentX + row[k], currentY + col[k], currentPoint.path));
+                    q.add(new Point(currentX + row[k], currentY + col[k], currentPoint.getPath()));
                 }
             }
         }
