@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Junior learn.iml" filepath="$PROJECT_DIR$/Junior learn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Task-ShortestWay.iml" filepath="$PROJECT_DIR$/Task-ShortestWay.iml" />
     </modules>
   </component>
 </project>
